@@ -1,6 +1,6 @@
 # SmartPlate
 1. A user-friendly website for an online recipe box ordering service that enables customers to easily browse, customize, and order recipe boxes with pre-portioned ingredients and step-by-step cooking instructions. 
-#PROPOSED SYSTEM
+# PROPOSED SYSTEM
 Features & Functionality we are planning to implement: 
 1.	Recipe Exploration and Selection
 •	Categorized recipe collections based on cuisines, dietary preferences, difficulty levels, and more. 
