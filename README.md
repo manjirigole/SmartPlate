@@ -1,9 +1,9 @@
 # SmartPlate
 1. A user-friendly website for an online recipe box ordering service that enables customers to easily browse, customize, and order recipe boxes with pre-portioned ingredients and step-by-step cooking instructions.
 # Group members:
-   Manjiri Gole
-   Shweta Bhutada
-   Akshata Nalavade
+1. Manjiri Gole
+2. Shweta Bhutada
+3. Akshata Nalavade
 # PROPOSED SYSTEM
 Features & Functionality we are planning to implement: 
 1.	Recipe Exploration and Selection
