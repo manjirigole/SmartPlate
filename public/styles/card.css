@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	overflow: auto;
+	background-color: #FDE9D1;
+	font-family: 'Inter',sans-serif;
+}
+/*nav bar css*/
+.nav{
+	display: flex;
+	align-items: center;
+	padding: auto;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.logo{
+	margin-top:20px;
+	margin-right: 100px;
+	height: auto;
+}
+.search-box{
+	margin-top: 30px;
+	height: 35px;
+	width:450px;
+	border-radius: 5px;
+	border-style: none;
+	margin-left: 240px;
+	margin-bottom: 20px;
+	margin-right: 70px;
+}
+.search-box::placeholder{
+	padding : 7px;
+	opacity: 70%;
+}
+
+.nav i{
+	font-size: 20px;
+	cursor: pointer;
+}
+.user{
+	max-width: 100px;
+	height: 30px;
+	background-color: #FDE9D1;
+	border-style: none;
+	word-spacing: 10px;
+	font-weight: 700;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #FDE9D1;
+	font-family: Arial;
+	margin-top: 30px;
+	margin-left: 40px;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	color:  #003B22;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+	font-size: 16px;
+	word-spacing: 10px;
+    margin-bottom: 10px;
+	border: none;
+	outline: none;
+	color: #003B22;
+	font-weight: 700;
+	padding: 14px 16px;
+	background-color: inherit;
+	font: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #003B22;
+	color: white;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+    height: 450x;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 24.90%;
+	padding: 10px;
+	/*background-color: #F3F3F3;*/
+  }
+  .column:hover{
+    height: 450x;
+  }
+  .column h4{
+	color: #5AC8AF;
+	margin-left: 10px;
+  }
+  
+  .column h4:hover{
+	cursor: pointer;
+	color: #478d7d;
+  }
+  /* Style links inside the columns */
+  .column a {
+	float: none;
+	color: grey;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a background color on hover */
+
+  .column a:hover {
+	background-color: white;
+	color: black;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	margin-right: 70px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+.responsive-logo{
+	display: none;
+}
+
+.view-plans{
+	display: none;
+	float: right;
+	width: 170px;
+	height: 35px;
+	border-style: none;
+	border-radius: 15px;
+	margin-right: 20px;
+	color: white;
+	background-color: #FC8801;
+	cursor: pointer;
+	font-weight: 700;
+}
+.view-plans:hover{
+	color: #FC8801;
+	font-weight: 700;
+	background-color: #003B22;
+
+}
+.border{
+	border-bottom: 2px solid black;
+	margin-top: 15px;
+	opacity: 30%;
+}
+/* card*/
+.card-section{
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 10px;
+}
+.card-section h3{
+    color:#003B22;
+    font-weight: 600;
+}
+.card-container{
+    display: grid;
+    gap:20px;
+    grid-template-columns: auto auto;
+    background-color: #FFE2BE;
+}
+.col1{
+    width:600px;
+    height: 400px;
+   /* background-color: #FC8801;*/
+    padding: 70px;
+}
+
+.card{
+    background-color: #003B22;
+    color:white;
+    width: 400px;
+    height: 240px;
+    border-radius: 7px;
+    margin-left: 25px;
+}
+.card i{
+    margin-right: 5px;
+    font-size: 22px;
+    padding-top: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.card p{
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.card2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+#display-card-number{
+    margin-left: 20px;
+}
+
+/*form*/
+.col2{
+    margin-right: 100px;
+}
+.col2 label{
+    margin-bottom: 10px;
+}
+input{
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-style: none;
+    border-bottom: 1px solid black;
+}
+
+button{
+    background-color: #003B22;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+button:hover{
+    background-color: white;
+    color:#003B22;
+    font-weight: 600;
+    cursor: pointer;
+}
