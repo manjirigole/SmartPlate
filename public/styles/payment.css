@@ -1,0 +1,312 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Inter',sans-serif;
+}
+body{
+	overflow: auto;
+    background-color: #FDE9D1;
+	font-family: 'Inter',sans-serif;
+}
+/*nav bar css*/
+.nav{
+	display: flex;
+	align-items: center;
+	padding: auto;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.logo{
+	margin-top:20px;
+	margin-right: 100px;
+	height: auto;
+}
+.search-box{
+	margin-top: 30px;
+	height: 35px;
+	width:450px;
+	border-radius: 5px;
+	border-style: none;
+	margin-left: 240px;
+	margin-bottom: 20px;
+	margin-right: 70px;
+}
+.search-box::placeholder{
+	padding : 7px;
+	opacity: 70%;
+}
+
+.nav i{
+	font-size: 20px;
+	cursor: pointer;
+}
+.user{
+	max-width: 100px;
+	height: 30px;
+	background-color: #FDE9D1;
+	border-style: none;
+	word-spacing: 10px;
+	font-weight: 700;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #FDE9D1;
+	font-family: Arial;
+	margin-top: 30px;
+	margin-left: 40px;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	color:  #003B22;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+	font-size: 16px;
+	word-spacing: 10px;
+    margin-bottom: 10px;
+	border: none;
+	outline: none;
+	color: #003B22;
+	font-weight: 700;
+	padding: 10px 10px;
+	background-color: inherit;
+	font: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #003B22;
+	color: white;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+    height: 450x;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 24.90%;
+	padding: 10px;
+	/*background-color: #F3F3F3;*/
+  }
+  .column:hover{
+    height: 450x;
+  }
+  .column h4{
+	color: #5AC8AF;
+	margin-left: 10px;
+  }
+  
+  .column h4:hover{
+	cursor: pointer;
+	color: #478d7d;
+  }
+  /* Style links inside the columns */
+  .column a {
+	float: none;
+	color: grey;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a background color on hover */
+
+  .column a:hover {
+	background-color: white;
+	color: black;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	margin-right: 70px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+.responsive-logo{
+	display: none;
+}
+
+.view-plans{
+	display: none;
+	float: right;
+	width: 170px;
+	height: 35px;
+	border-style: none;
+	border-radius: 15px;
+	margin-right: 20px;
+	color: white;
+	background-color: #FC8801;
+	cursor: pointer;
+	font-weight: 700;
+}
+.view-plans:hover{
+	color: #FC8801;
+	font-weight: 700;
+	background-color: #003B22;
+
+}
+.border{
+	border-bottom: 2px solid black;
+	margin-top: 15px;
+	opacity: 30%;
+}
+
+/*payment css*/
+.heading{
+	display: inline;
+	padding: 10px;
+}
+.heading h3{
+	display: none;
+	color:#003B22;
+	margin-left: 60px;
+	margin-right: 60px;
+	font-weight: 700;
+}
+.heading p{
+	float: right;
+	padding: 10px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 60px;
+	font-weight: 600;
+}
+.card-container{
+	display: grid;
+	gap:50px;
+	grid-template-columns: auto auto;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 20px;
+}
+.card-1{
+	width:750px;
+	background-color: #FFE2BE;
+	padding: 30px;
+	color:#003B22;
+	font-weight: 800;
+	border-radius: 10px;
+}
+
+.card-1 i{
+	float: right;
+	margin-top: 20px;
+}
+.details-card1{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+}
+.details-card1 label{
+	width: 100%;
+}
+.name, .address, .state{
+	height: 35px !important;
+	border-radius: 7px;
+	border-style: none;
+}
+.town, .pcode{
+	height: 35px;
+	border-radius: 7px;
+	border-style: none;
+}
+.details-card1 span{
+	color: red;
+}
+.form-btn{
+	width:200px;
+	height: 35px;
+	border-radius: 7px;
+	border-style: none;
+	color: white;
+	background-color: #003B22;
+	margin-left: 200px;
+	margin-top: 25px;
+	font-weight: 800;
+}
+.form-btn:hover{
+	cursor: pointer;
+	background-color: white;
+	color: #003B22;
+}
+.card-2{
+	background-color: #FFE2BE;
+	width:400px;
+	height: 400px;
+	padding: 30px;
+	color:#003B22;
+	font-weight: 800;
+	border-radius: 10px;
+}
+.card-2 i{
+	float: right;
+	margin-top: 20px;
+}
+th, td{
+	width: 800px;
+	text-align: left;
+}
+th{
+	margin-right: 70px;
+}
+.form-btn2{
+	width:200px;
+	height: 35px;
+	border-radius: 7px;
+	border-style: none;
+	color: white;
+	background-color: #003B22;
+	margin-left: 70px;
+	margin-top: 25px;
+	font-weight: 800;
+}
+.form-btn2:hover{
+	cursor: pointer;
+	background-color: white;
+	color: #003B22;
+	font-weight: 800;
+}

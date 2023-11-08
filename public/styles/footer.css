@@ -1,0 +1,67 @@
+.footer{
+	background-color: #003B22;
+	padding: 20px;
+}
+.footer-container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 40px;
+	padding: 50px;
+}
+ .columns {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+  }
+
+  .col1 {
+    flex: 1; /* Distribute space evenly among columns */
+    margin: 0 10px; /* Add margin for spacing between columns */
+    text-align: center; /* Center the content horizontally */
+  }
+
+  .col1 ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding on the ul element */
+    text-align: left; /* Align list items to the left */
+  }
+
+  .col1 ul li {
+    margin-bottom: 10px; 
+    color: white;
+    font-family: 'Inter',sans-serif;
+
+  }
+  .heading{
+  	margin-bottom: 10px;
+  	font-weight: 700;
+  	font-family: 'Inter',sans-serif;
+  	color:white;
+  }
+  .Subscribe{
+  	color:white;
+  	font-weight: 700;
+  	font-family: 'Inter',sans-serif;
+
+  }
+  .footer-input{
+  	width:250px;
+  	height: 35px;
+  	opacity: 20%;
+  	border-style: none;
+  	border-radius: 15px;
+  	font-family: 'Inter',sans-serif;
+  }
+  .footer-desc2{
+  	color:white;
+  	font-size: 10px;
+
+  }
+@media (max-width: 768px){
+    .footer-logo{
+        display: none;
+    }
+    .footer-container{
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+}
