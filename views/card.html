@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/public/styles/card.css">
+	<link rel="stylesheet" href="/public/styles/chatbot.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="recipe.js"></script>
+	<title>Card</title>
+</head>
+<body>
+	<!--<h1>Hi <%= name %></h1>-->
+	<img src="images/sp logo2.png" class="responsive-logo"><input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <!--<i class="fa-solid fa-bars" style="color: #ffffff;"></i>-->
+    </label>
+
+
+
+	<div class="nav">
+		<img src="images/sp logo2.png" alt="" class="logo">
+		<form class="example">
+		<input type="text" placeholder="What are you Looking for?" class="search-box" name="search-box">
+		</form action="search">
+		<i class="fa-regular fa-heart" style="color: #003b22;"></i>
+		<a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #003b22;"></i></a>
+		<button class="user"><i class="fa-regular fa-user" style="color: #003b22;"></i><b> ABCD</b></button>
+	</div>
+	<div class="navbar">
+		<a href="index" class="nav-element">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn" class="nav-element"><b>Menu</b>
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<div class="row">
+			  <div class="column">
+				<h4>Veggies</h4>
+				<a href="#">Veggie and Rice Bowl</a>
+				<a href="chickpea.html">Chickpea Rice Bowl</a>
+				<a href="recipes.html">Cheese Tortellini</a>
+			  </div>
+			  <div class="column">
+				<h4>Meat</h4>
+				<a href="chickencutlet.html">Chicken Cutlets </a>
+				<a href="#">Chicken Orzo</a>
+				<a href="#"></a>
+			  </div>
+			  <div class="column">
+				<h4>Fit and Wholesome</h4>
+				<a href="roastedsalad.html">Roasted Vegetable Salad</a>
+				<a href="#">Chocolate covered Strawberries</a>
+				<a href="#">Whole Grain Pancakes </a>
+				<a href="#">Smoothie Bowl</a>
+			  </div>
+			  <div class="column">
+				<h4>Desserts</h4>
+				<a href="#">Chocolate Mug Cake</a>
+				<a href="peanutcookie.html">Peanut Butter Cookies</a>
+				<a href="#">Banana Ice Cream </a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		  <a href="#" class="nav-element" id="about">About</a>
+		  <a href="#" class="nav-element">Contact Us</a>
+		  <button class="view-plans">View Plans</button>
+		</div>
+</div>
+<div class="border"></div>
+
+<!----CARD -->
+<div class="card-section">
+    <h3>Payment Details</h3>
+    <div class="card-container">
+        <div class="col1">
+            <div class="card">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-stripe"></i>
+                <p>CARD NUMBER</p>
+                <div id="display-card-number"></div>
+                <div class="card2">
+                    <div>CARDHOLDER
+                        <div id="display-cardholder"></div>
+                    </div>
+                    <div>EXPIRES
+                        <div id="display-expires"></div>
+                    </div>
+                    <div>CVV
+                        <div id="display-cvc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            <form id="paymentForm" method="post" action="success.html">
+                <h3>Payment Details</h3>
+                <label class="label">CARD NUMBER</label><br>
+                <input type="text" id="cardNumberInput"><br>
+                <label class="label">CARDHOLDER</label><br>
+                <input type="text" id="cardholderInput"><br>
+                <label>EXPIRES</label><br>
+                <input type="text" id="expiresInput" placeholder="MM/YY"><br>
+                <label>CVV</label><br>
+                <input type="password" id="cvcInput"><br>
+            </form>
+			<a href="success.html" target="_blank"><button type="submit">Pay</button></a>
+        </div>
+    </div>
+</div>
+<script src="card.js"></script>
+</body>
+</html>

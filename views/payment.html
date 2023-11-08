@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="/public/styles/payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="script.js"></script>
+    <title>Payment</title>
+</head>
+<body>
+    <div class="nav">
+      <a href="index.html"><img src="images/sp logo2.png" alt="" class="logo"></a>
+		<input type="text" placeholder="What are you Looking for?" class="search-box">
+		<i class="fa-regular fa-heart" style="color: #003b22;"></i>
+		<i class="fa-solid fa-cart-shopping" style="color: #003b22;"></i>
+		<button class="user"><i class="fa-regular fa-user" style="color: #003b22;"></i><b> ABCD</b></button>
+	</div>
+	<div class="navbar">
+		<a href="#home" class="nav-element">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn" class="nav-element"><b>Menu</b>
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<div class="row">
+			  <div class="column">
+				<h4>Veggies</h4>
+				<a href="#">Veggie and Rice Bowl</a>
+				<a href="#">Chickpea Rice Bowl</a>
+				<a href="#">Cheese Tortellini</a>
+			  </div>
+			  <div class="column">
+				<h4>Meat</h4>
+				<a href="#">Chicken Cutlets </a>
+				<a href="#">Chicken Orzo</a>
+				<a href="#"></a>
+			  </div>
+			  <div class="column">
+				<h4>Fit and Wholesome</h4>
+				<a href="#">Roasted Vegetable Salad</a>
+				<a href="#">Chocolate covered Strawberries</a>
+				<a href="#">Whole Grain Pancakes </a>
+				<a href="#">Smoothie Bowl</a>
+			  </div>
+			  <div class="column">
+				<h4>Desserts</h4>
+				<a href="#">Chocolate Mug Cake</a>
+				<a href="#">Peanut Butter Cookies</a>
+				<a href="#">Banana Ice Cream </a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		  <a href="#" class="nav-element" id="about">About</a>
+		  <a href="#" class="nav-element">Contact Us</a>
+		  <button class="view-plans">View Plans</button>
+		</div>
+</div>
+<div class="border"></div>  
+<div class="heading">
+  <p>See All</p><h3>Your Payment</h3>
+</div>
+<div class="card-container">
+  <div class="card-1">
+    <b><i class="fa-solid fa-xmark" style="color: #003b22;"></i></b><p>Your Billing Address</p>
+    <div class="details-card1">
+      <label>Name</label>
+      <input type="text" class="name" name="name">
+      <label>Address<span>*</span></label>
+      <input type="text" class="address" placeholder="Street Address">
+      <label>Address line 2</label>
+      <input type="text" class="address" placeholder="Flat No./House Name">
+      <label class="town-label">Town/City<span>*</span></label>
+      <input type="text" class="town" placeholder="City/Town">
+      <label class="pcode-label">Pincode<span>*</span></label>
+      <input type="text" class="pcode" placeholder="400761">
+      <label>State<span>*</span></label>
+      <input type="text" class="state" placeholder="">
+      <a href="card.html" target="_blank"><button class="form-btn">Submit</button></a>
+    </div>
+  </div>
+  <div class="card-2">
+    <b><i class="fa-solid fa-xmark" style="color: #003b22;"></i></b><p>Your Billing Address</p>
+    <div class="card-2-cols">
+      <table cellpadding="10" cellspacing="10">
+        <th>Total Amount</th>
+        <th>Price</th>
+        <tr>
+          <td>Cheese Tortellini</td>
+          <td>Price</td>
+        </tr>
+        <tr>
+          <td>Cheese Tortellini</td>
+          <td>Price</td>
+        </tr>
+      </table>
+      <button class="form-btn2">Price</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
