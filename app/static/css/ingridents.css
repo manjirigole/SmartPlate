@@ -1,0 +1,35 @@
+body{
+    background-color: lightskyblue;
+}
+.ingredients-nutrition {
+    width: 700px;
+    flex-wrap: wrap; /* Allow ingredients to wrap to the next row if needed */
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ingredient {
+    display: flex;
+    align-items: center; /* Vertically center the content within each ingredient */
+    /*width: calc(33.33% - 10px); /* Make each ingredient take up one-third of the container width with spacing */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.circle-image {
+    width: 80px; /* Adjust the size of the circular image */
+    height: 80px; /* Adjust the size of the circular image */
+    border-radius: 50%; /* Make the container a circle */
+    overflow: hidden; /* Hide any image overflow */
+    margin-right: 20px; /* Add spacing between the image and details */
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio and cover the circle */
+}
+
+.ingredient-details {
+    display: flex;
+    flex-direction: column; /* Stack the name and measurement in a column */
+}

@@ -1,0 +1,530 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	overflow: auto;
+	background-color: #FDE9D1;
+	font-family: 'Inter',sans-serif;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	padding: auto;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.logo{
+	margin-top:20px;
+	margin-right: 100px;
+	height: auto;
+}
+.search-box{
+	margin-top: 30px;
+	height: 35px;
+	width:450px;
+	border-radius: 5px;
+	border-style: none;
+	margin-left: 240px;
+	margin-bottom: 20px;
+	margin-right: 70px;
+}
+.search-box::placeholder{
+	padding : 7px;
+	opacity: 70%;
+}
+.nav i{
+	font-size: 20px;
+	cursor: pointer;
+}
+.user{
+	max-width: 100px;
+	height: 30px;
+	background-color: #FDE9D1;
+	border-style: none;
+	font-weight: 700;
+}
+.user-btn{
+  background-color: #FDE9D1;
+  height: 30px;
+  border-style: none;
+  margin-right: 10px;
+}
+.user-btn:hover{
+  cursor: pointer;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #FDE9D1;
+	font-family: Arial;
+	margin-top: 30px;
+	margin-left: 40px;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	color:  #003B22;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+	font-size: 16px;
+	word-spacing: 10px;
+    margin-bottom: 10px;
+	border: none;
+	outline: none;
+	color: #003B22;
+	font-weight: 700;
+	padding: 14px 16px;
+	background-color: inherit;
+	font: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #003B22;
+	color: white;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+    height: 450x;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 24.90%;
+	padding: 10px;
+	/*background-color: #F3F3F3;*/
+  }
+  .column:hover{
+    height: 450x;
+  }
+  .column h4{
+	color: #5AC8AF;
+	margin-left: 10px;
+  }
+  
+  .column h4:hover{
+	cursor: pointer;
+	color: #478d7d;
+  }
+  /* Style links inside the columns */
+  .column a {
+	float: none;
+	color: grey;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a background color on hover */
+
+  .column a:hover {
+	background-color: white;
+	color: black;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+.view-plans{
+  display: none;
+  float: right;
+	width: 170px;
+	height: 35px;
+	border-style: none;
+	border-radius: 15px;
+	margin-right: 20px;
+	color: white;
+	background-color: #FC8801;
+	cursor: pointer;
+	font-weight: 700;
+}
+.view-plans:hover{
+	color: #FC8801;
+	font-weight: 700;
+	background-color: #003B22;
+
+}
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	margin-right: 70px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+.responsive-logo{
+	display: none;
+}
+
+/* Your existing CSS code */
+
+@media (max-width: 952px) {
+  .responsive-logo {
+    margin-top: 30px;
+    display: block;
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  .view-plans{
+    display: none;
+  }
+
+  .checkbtn {
+    display: inline-block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav img {
+    display: block;
+  }
+
+ .navbar  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-element .dropbtn{
+  	margin-top: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+ 
+
+  @media (max-width: 858px) {
+    /*.checkbtn {
+      display: inline-block;
+      flex-direction: column;
+    }
+*/
+    .navbar {
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    text-align: center;
+    }
+
+    .navbar .nav-element{
+    flex-direction: column;
+      margin-bottom: 10px;
+    }
+    /* Display in a column */
+
+     #check:checked + .navbar .nav-element {
+      /*display: block; /* Show ul when the checkbox is checked */
+      left: 0;
+
+    }
+  }
+
+}
+.border{
+	border-bottom: 2px solid black;
+	margin-top: 15px;
+	opacity: 30%;
+    margin-bottom: 10px;
+}
+/*end of the nav bar css*/
+
+.heading{
+    width: 100%; 
+    height: 100%; 
+    padding-top: 24px; 
+    padding-bottom: 30px; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: inline-flex;
+}
+
+.category1{
+    margin-left: 60px;
+    color: black; 
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    letter-spacing: 0.15px; 
+}
+.button{
+  display: none;
+    margin-right: 60px;
+    color: black; 
+    font-size: 18px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    letter-spacing: 0.15px;
+    font-weight: 700;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.rectangle-box{
+    margin-left: 60px;
+    width: 100%; 
+    height: 100%;
+    align-items: center; 
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.content-box{
+    height: 124px;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 8px; 
+    display: flex;
+}
+.item{
+    padding-right: 16px;
+}
+
+.recipe_img{
+    width: 300px;
+    height:200px; 
+    border-radius: 15px;
+    transition: ease-out 0.3s;
+    margin-bottom: 20px;
+    margin-right: 90px;
+}
+.recipe_img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.recipe_name{
+    color: black;
+    font-size: 18px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    letter-spacing: 0.15px; 
+    word-wrap: break-word;
+}
+.recipe_desc{
+    color: black;
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 450; 
+    letter-spacing: 0.15px; 
+    word-wrap: break-word;
+}
+
+.recipe_detail{
+    width: 300px; 
+    padding-top:24px; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: inline-flex;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.time,.level{
+    color: black;
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: 500; 
+    letter-spacing: 0.15px; 
+    word-wrap: break-word;
+}
+
+.rectangle-box2{
+    width: 100%; 
+    height: 100%; 
+    align-items: center; 
+    display:flex;
+}
+
+.item2 {
+    padding-right: 16px;
+}
+.footer{
+	background-color: #003B22;
+	padding: 20px;
+}
+.footer-container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 40px;
+	padding: 50px;
+}
+ .columns {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+  }
+
+  .col1 {
+    flex: 1; /* Distribute space evenly among columns */
+    margin: 0 10px; /* Add margin for spacing between columns */
+    text-align: center; /* Center the content horizontally */
+  }
+
+  .col1 ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding on the ul element */
+    text-align: left; /* Align list items to the left */
+  }
+
+  .col1 ul li {
+    margin-bottom: 10px; 
+    color: white;
+    font-family: 'Inter',sans-serif;
+
+  }
+  .heading{
+  	margin-bottom: 10px;
+  	font-weight: 700;
+  	font-family: 'Inter',sans-serif;
+  	color:white;
+  }
+  .Subscribe{
+  	color:white;
+  	font-weight: 700;
+  	font-family: 'Inter',sans-serif;
+
+  }
+  .footer-input{
+  	width:250px;
+  	height: 35px;
+  	opacity: 20%;
+  	border-style: none;
+  	border-radius: 15px;
+  	font-family: 'Inter',sans-serif;
+  }
+  .footer-desc2{
+  	color:white;
+  	font-size: 10px;
+
+  }
+
+@media (max-width: 858px){
+    .rectangle-box{
+        flex-direction: column;
+    }
+    .recipe_detail{
+        margin-bottom: 40px;
+    }
+    .footer-logo{
+        display: none;
+    }
+    .footer-container{
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+}
+.grid-container {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/* Three columns with equal width */
+  grid-template-rows: auto auto auto ;
+  gap: 10px; /* Adjust the gap between columns */
+}
+
+.grid-item {
+  color: black;
+  font-weight: 700;
+  width: 400px;
+  height: 450px;
+  /*border: 1px solid #ccc; /* Add a border for visual separation */
+}
+
+.grid-item img {
+  margin-top: 30px;
+  width: 340px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.grid-item h3{
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+.desc{
+  font-size: 17px;
+}
+.grid-item {
+  text-align: center; /* Align the text in the center */
+}
+
+.details {
+  display: flex;
+  justify-content: space-between; /* Add even space between child elements */
+  align-items: center; /* Align items vertically in the center */
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  word-spacing: 25px;
+}
+
+/*.cd-add-to-cart {
+  margin-top: 20px;
+  background-color: #003B22;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+}
+
+.cd-add-to-cart  {
+  text-align: center;
+  margin-bottom: 5px;
+}*/
+
+.grid-item button{
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  background-color: #003B22;
+}
+.grid-item button:hover{
+  background-color: #FC8801;
+  color: #003B22;
+  width: 210px;
+  height: 60px;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cd-cart__checkout{
+  background-color: #003B22;
+}

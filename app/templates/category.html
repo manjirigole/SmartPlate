@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/category.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.scss">
+	<link rel="stylesheet" type="text/css" href="../static/css/footer.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script type="text/javascript" src="../static/js/script.js"></script>
+</head>
+<body style="background-color: #FDE9D1;">
+	<div class="nav">
+		<a href="./index.html" target="_blank"><img src="../static/images/sp logo2.png" alt="" class="logo"></a>
+		<input type="text" placeholder="What are you Looking for?" class="search-box">
+		<i class="fa-regular fa-heart" style="color: #003b22;"></i>
+		<i class="fa-solid fa-cart-shopping" style="color: #003b22; display: none;" ></i>
+		<button class="user"><i class="fa-regular fa-user" style="color: #003b22;"></i><b> ABCD</b></button>
+	</div>
+	<div class="navbar">
+		<a href="#home">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn"><b>Menu</b>
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<div class="row">
+			  <div class="column">
+				<h4>Veggies</h4>
+				<a href="#">Veggie and Rice Bowl</a>
+				<a href="#">Chickpea Rice Bowl</a>
+				<a href="#">Cheese Tortellini</a>
+			  </div>
+			  <div class="column">
+				<h4>Meat</h4>
+				<a href="#">Chicken Cutlets </a>
+				<a href="#">Chicken Orzo</a>
+				<a href="#"></a>
+			  </div>
+			  <div class="column">
+				<h4>Fit and Wholesome</h4>
+				<a href="#">Roasted Vegetable Salad</a>
+				<a href="#">Chocolate covered Strawberries</a>
+				<a href="#">Whole Grain Pancakes </a>
+				<a href="#">Smoothie Bowl</a>
+			  </div>
+			  <div class="column">
+				<h4>Desserts</h4>
+				<a href="#">Chocolate Mug Cake</a>
+				<a href="#">Peanut Butter Cookies</a>
+				<a href="#">Banana Ice Cream </a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<a href="#">About</a>
+		<a href="#">Contact Us</a>
+	  </div>
+<main class="cd-main container margin-top">
+  <div class="text-component text-center">
+	<div class="grid">
+		<h2>Veggies</h2>
+		<!-- First set of three columns -->
+		<div class="grid-container">
+			<!-- First Column -->
+			<div class="grid-item">
+			  <!-- Content for the first item in the first set -->
+			  <a href="#" target="_blank"><img src="../static/images/recipes images/category images/veggies.jpg" alt="veggie"></a>
+			  <h3>Veggies and Rice Bowl</h3>
+			  <p class="desc">loaded stir-fry of veggies, rice and flavours</p>
+			  <span>PRICE</span>
+			  <div class="details">15-minutes  400-Cal   Easy</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Second Column -->
+			<div class="grid-item">
+			  <!-- Content for the second item in the first set -->
+			  <a href="./chickpea.html" target="_blank"><img src="../static/images/recipes images/category images/chickpea.jpg" alt="chickpea"></a>
+			  <h3>Chickpea Rice Bowl</h3>
+			  <p class="desc">roasted chickpeas, onion, tomatoes and spices</p>
+			  <span>PRICE</span>
+			  <div class="details">30-minutes  400-Cal   Medium</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Third Column -->
+			<div class="grid-item">
+			  <!-- Content for the third item in the first set -->
+			  <a href="./recipes.html" target="_blank"><img src="../static/images/recipes images/category images/cheesetort.jpg" alt="cheese-tort"></a>
+			  <h3>Cheese Tortellini</h3>
+			  <p class="desc">Parmesan, and Chili Flakes</p>
+			  <span>PRICE</span>
+			  <div class="details">40-minutes  720 Kcal   Easy</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+		  </div>
+		  
+		  <!-- Second set of three columns -->
+		  <h2>Meat</h2>
+		  <div class="grid-container">
+			<!-- Fourth Column -->
+			<div class="grid-item">
+			  <!-- Content for the first item in the second set -->
+			  <a href="./chickencutlet.html" target="_blank"><img src="../static/images/recipes images/category images/chickencut.jpg" alt="chicken-cutlets"></a>
+			  <h3>Chicken Cutlets</h3>
+			  <p class="desc">spices with cherry jam, pineapple juice</p>
+			  <span>PRICE</span>
+			  <div class="details">15-minutes  400-Cal   Easy</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Fifth Column -->
+			<div class="grid-item">
+			  <!-- Content for the second item in the second set -->
+			  <a href="./chickenorzo.html" target="_blank"><img src="../static/images/recipes images/category images/chickenorzo.jpg" alt="veggie"></a>
+			  <h3>Chicken Orzo</h3>
+			  <p class="desc">roasted chickpeas, onion, tomatoes and spices</p>
+			  <span>PRICE</span>
+			  <div class="details">30-minutes  400-Cal   Medium</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Sixth Column -->
+			<div class="grid-item">
+			  <!-- Content for the third item in the second set -->
+			  <a href="./roastedsalad.html" target="_blank"><img src="../static/images/recipes images/category images/roasted salad.jpg" alt="roasted-salad"></a>
+			  <h3>Roasted Vegetable Salad</h3>
+			  <p class="desc">oregano-roasted potatoes, bell pepper,onion</p>
+			  <span>PRICE</span>
+			  <div class="details">15-minutes  400-Cal   Easy</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+		  </div>
+	
+		  <!-- Third set of three columns -->
+		  <h2>Desserts</h2>
+		  <div class="grid-container">
+			<!-- Seventh Column -->
+			<div class="grid-item">
+			  <!-- Content for the first item in the third set -->
+			  <a href="#" target="_blank"><img src="../static/images/recipes images/category images/brownies2.jpg" alt="brownies"></a>
+			  <h3>Chocolate brownies</h3>
+			  <p class="desc">chocolate brownie mix, melted butter</p>
+			  <span>PRICE</span>
+			  <div class="details">45-minutes  400-Cal   Medium</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Eighth Column -->
+			<div class="grid-item">
+			  <!-- Content for the second item in the third set -->
+			  <a href="#" target="_blank"><img src="../static/images/recipes images/category images/cookies2.jpg" alt="cookies"></a>
+			  <h3>Chocolate dipped peanut cookies</h3>
+			  <p class="desc">white chocolate chips and peanuts</p>
+			  <span>PRICE</span>
+			  <div class="details">50-minutes  720-Cal   Easy</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+	
+			<!-- Ninth Column -->
+			<div class="grid-item">
+			  <!-- Content for the third item in the third set -->
+			  <a href="#" target="_blank"><img src="../static/images/recipes images/category images/chocostraw2.jpg" alt="choco-strawberries"></a>
+			  <h3>Chocolate dipped Strawberries</h3>
+			  <p class="desc">chocolate, milk and strawberries</p>
+			  <span>PRICE</span>
+			  <div class="details">30-minutes  400-Cal   Medium</div>
+			  <p class="flex flex-wrap flex-center flex-gap-xxs">
+				<button href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="25.99">Add To Cart</button>
+			</div>
+		  </div>
+	
+	  </div>
+	</div>
+  </main>
+<div class="cd-cart cd-cart--empty js-cd-cart">
+	<a href="#0" class="cd-cart__trigger text-replace">
+		Cart
+		<ul class="cd-cart__count"> <!-- cart items count -->
+			<li>0</li>
+			<li>0</li>
+		</ul> <!-- .cd-cart__count -->
+	</a>
+
+	<div class="cd-cart__content">
+		<div class="cd-cart__layout">
+			<header class="cd-cart__header">
+				<h2>Cart</h2>
+				<span class="cd-cart__undo">Item removed. <a href="#0">Undo</a></span>
+			</header>
+			
+			<div class="cd-cart__body">
+				<ul>
+					<!-- products added to the cart will be inserted here using JavaScript -->
+				</ul>
+			</div>
+
+			<footer class="cd-cart__footer">
+				<a href="./payment.html" class="cd-cart__checkout">
+          <em>Checkout - $<span>0</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24"><g fill="none" stroke="currentColor"><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3" y1="12" x2="21" y2="12"/><polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="15,6 21,12 15,18 "/></g>
+            </svg>
+          </em>
+        </a>
+			</footer>
+		</div>
+	</div> <!-- .cd-cart__content -->
+</div> <!-- cd-cart -->
+<script src="../static/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="../static/js/main.js"></script> 
+
+  
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div><img src="../static/images/sp logo2.png" class="footer-logo"></div>
+            <div class="columns">
+                <div class="col1">
+                    <ul>
+                        <span class="heading"><li>First Col</li></span>
+                        <li>First page</li>
+                        <li>Second page</li>
+                        <li>Third page</li>
+                        <li>Fourth page</li>
+                    </ul>
+                </div>
+                <div class="col1">
+                    <ul>
+                        <span class="heading"><li>Second Col</li></span>
+                        <li>First page</li>
+                        <li>Second page</li>
+                        <li>Third page</li>
+                        <li>Fourth page</li>
+                    </ul>
+                </div>
+                <div class="col1">
+                    <ul>
+                        <span class="heading"><li>Third Col</li></span>
+                        <li>First page</li>
+                        <li>Second page</li>
+                        <li>Third page</li>
+                        <li>Fourth page</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col2">
+                <p class="Subscribe">Subscribe</p>
+                <input type="text" class="footer-input" placeholder="Enter Name">
+                <p class="footer-desc2"> Subscribe to our newsletter to stay up to date on new <br>products and features. </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/cart.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="../static/js/cart.js"></script>
+	<title>Cart</title>
+</head>
+<body>
+	<!--------------------------------------------nav bar 1--------------------------------------------->
+	<div class="nav">
+		<img src="../static/images/sp logo2.png" alt="" class="logo">
+		<input type="text" placeholder="What are you Looking for?" class="search-box">
+		<i class="fa-regular fa-heart" style="color: #003b22;"></i>
+		<i class="fa-solid fa-cart-shopping" style="color: #003b22;" id="cart-icon"><span>  0</span></i>
+		<button class="user"><i class="fa-regular fa-user" style="color: #003b22;"></i><b> ABCD</b></button>
+		<span class="border" style="border-bottom: 1px solid black;"></span>
+	</div>
+	<div class="navbar">
+		<a href="#home">Home</a>
+		<div class="dropdown">
+		  <button class="dropbtn"><b>Menu</b>
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<div class="row">
+			  <div class="column">
+				<h4>Veggies</h4>
+				<a href="#">Veggie and Rice Bowl</a>
+				<a href="#">Chickpea Rice Bowl</a>
+				<a href="#">Cheese Tortellini</a>
+			  </div>
+			  <div class="column">
+				<h4>Meat</h4>
+				<a href="#">Chicken Cutlets </a>
+				<a href="#">Chicken Orzo</a>
+				<a href="#"></a>
+			  </div>
+			  <div class="column">
+				<h4>Fit and Wholesome</h4>
+				<a href="#">Roasted Vegetable Salad</a>
+				<a href="#">Chocolate covered Strawberries</a>
+				<a href="#">Whole Grain Pancakes </a>
+				<a href="#">Smoothie Bowl</a>
+			  </div>
+			  <div class="column">
+				<h4>Desserts</h4>
+				<a href="#">Chocolate Mug Cake</a>
+				<a href="#">Peanut Butter Cookies</a>
+				<a href="#">Banana Ice Cream </a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<a href="#">About</a>
+		<a href="#">Contact Us</a>
+	  </div>
+	  <!-------------------------------------- feed -->
+	  <div class="product-grid">
+		<!--Reapeating the product card for each product-->
+		<div class="product-card">
+			<img src="../static/images/recipes images/category images/cheesetort.jpg" alt="Cheese-Tort">
+			<h3>Cheese Tortellini</h3>
+			<p>Parmesean, And Chilli Flakes</p>
+			<span><b>Price</b></span><br>
+			<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button>
+			<h4 class="customize-container">
+				<u>Customize</u>
+			</h4>
+		</div>
+
+		<!--product-2-->
+		<div class="product-card">
+			<img src="../static/images/recipes images/category images/chickpea.jpg" alt="Cheese-Tort">
+			<h3>Chickpea Rice Bowl</h3>
+			<p>Roasted Chickpeas, Onion, Tomatoes And Spices</p>
+			<span><b>Price</b></span><br>
+			<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button><h4><u>Customize</u></h4>
+		</div>
+
+		<!----product-3-->
+		<div class="product-card">
+			<img src="../static/images/recipes images/category images/chickencut.jpg" alt="Cheese-Tort">
+			<h3>Sweet 'n' Smoky Chicken Cutlets</h3>
+			<p>with Cherry Ancho BBQ Sauce, Green Beans & Pineapple Rice</p>
+			<span><b>Price</b></span><br>
+			<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button><h4><u>Customize</u></h4>
+		</div>
+		</div>
+<!-----------------------------------------row 2 -->
+
+		<div class="product-grid">
+			<!--Reapeating the product card for each product-->
+			<div class="product-card">
+				<img src="../static/images/recipes images/category images/chickenorzo.jpg" alt="Cheese-Tort">
+				<h3>Chicken Orzo Dinner</h3>
+				<p>with Cheesy Roasted Zucchini and Tomato</p>
+				<span><b>Price</b></span><br>
+				<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button><h4><u>Customize</u></h4>
+			</div>
+	
+			<!--product-2-->
+			<div class="product-card">
+				<img src="../static/images/recipes images/category images/roasted salad.jpg" alt="Cheese-Tort">
+				<h3>Mediterranean Roasted Vegetable Salad</h3>
+				<p>with Potatoes, Bell Pepper, Red Onion & Feta</p>
+				<span><b>Price</b></span><br>
+				<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button><h4><u>Customize</u></h4>
+			</div>
+	
+			<!----product-3-->
+			<div class="product-card">
+				<img src="../static/images/recipes images/category images/veggies.jpg" alt="Cheese-Tort">
+				<h3>Cranberry-Apple Kale Salad</h3>
+				<p>with Roasted Veggies, Parm Frico & Garlic Ciabatta</p>
+				<span><b>Price</b></span><br>
+				<button class="cart-btn">Add to Cart</button> <button class="remove-btn">-</button><h4><u>Customize</u></h4>
+			</div>
+			</div>
+			<!--------------------------------------customization---------------------------------------->
+			<a href="payment.html" blank="#"><button class="payment-btn" >Payment</button></a>
+</body>
+</html>

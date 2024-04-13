@@ -1,0 +1,13 @@
+colors:
+background-color: #FDE9D1 //offwhite
+dark - green : #003B22;
+yellow : #FC8801
+blue(button): #5AC8AF
+white: #F3F3F3
+
+font-family:
+Inter,sans0serif
+Archivo-Black
+
+bold text: 
+font-weight:700px
