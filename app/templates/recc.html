@@ -4,48 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Recommendations</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/recc.css') }}">
 </head>
 <body>
     <h1>Recipe Recommendations</h1>
-    <form id="searchForm">
+    <form id="recipe-form">
         <label for="recipe">Select a Recipe:</label>
-        <select id="recipe" name="recipe">
-            {% for recipe in recipes %}
-                <option value="{{ recipe }}">{{ recipe }}</option>
+        <select name="recipe" id="recipe">
+            {% for title in recipe_titles %}
+            <option value="{{ title }}">{{ title }}</option>
             {% endfor %}
         </select>
-        <button type="submit">Search</button>
+        <button type="submit">Get Recommendations</button>
     </form>
     <div id="recommendations"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#searchForm').submit(function(event){
-                event.preventDefault();
-                var selectedRecipe = $('#recipe').val();
-                $.ajax({
-                    type: 'POST',
-                    url: '/recommendations',
-                    data: {'recipe': selectedRecipe},
-                    success: function(response){
-                        displayRecommendations(response);
-                    },
-                    error: function(error){
-                        console.log(error);
-                    }
+        document.getElementById('recipe-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedRecipe = document.getElementById('recipe').value;
+            fetch('/recommendations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'recipe=' + encodeURIComponent(selectedRecipe),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var recommendationsDiv = document.getElementById('recommendations');
+                recommendationsDiv.innerHTML = '';
+                data.forEach(function(recipe) {
+                    var recipeDiv = document.createElement('div');
+                    var title = document.createElement('h2');
+                    title.textContent = recipe.title;
+                    var image = document.createElement('img');
+                    image.src = '/static/images/Food Images/' + recipe.image_filename; // Fetch image directly from the directory
+                    recipeDiv.appendChild(title);
+                    recipeDiv.appendChild(image);
+                    recommendationsDiv.appendChild(recipeDiv);
                 });
             });
-
-            function displayRecommendations(recipes){
-                $('#recommendations').empty();
-                recipes.forEach(function(recipe){
-                    var image = $('<img>').attr('src', recipe.image_name).attr('alt', recipe.title);
-                    var title = $('<h3>').text(recipe.title);
-                    $('#recommendations').append(image).append(title);
-                });
-            }
         });
     </script>
+    
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendations</title>
+    <style>
+        /* Hide the recommendations section initially */
+        #recommendations {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipe Recommendations</h1>
+    <form id="recipe-form">
+        <label for="recipe">Select a Recipe:</label>
+        <select name="recipe" id="recipe">
+            {% for index in range(recipe_titles|length) %}
+            <option value="{{ recipe_titles[index] }}">{{ recipe_titles[index] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <div id="recommendations"></div>
+    <script>
+        document.getElementById('recipe-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedRecipe = document.getElementById('recipe').value;
+            fetch('/recommendations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'recipe=' + encodeURIComponent(selectedRecipe),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var recommendationsDiv = document.getElementById('recommendations');
+                recommendationsDiv.innerHTML = '';
+                data.forEach(function(recipe) {
+                    var recipeDiv = document.createElement('div');
+                    var title = document.createElement('h2');
+                    title.textContent = recipe.title;
+                    var image = document.createElement('img');
+                    //image.src = '/images/' + recipe.image_path; // Use Flask route for serving images
+                    image.src = '{{ url_for("static", filename="images/Food Images/") }}' + recipe.image_path;; // Use Flask url_for to serve images
+                    recipeDiv.appendChild(title);
+                    recipeDiv.appendChild(image);
+                    recommendationsDiv.appendChild(recipeDiv);
+                });
+                // Show the recommendations section after receiving data
+                recommendationsDiv.style.display = 'block';
+            });
+        });
+    </script>
+    
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendations</title>
+</head>
+<body>
+    <h1>Recipe Recommendations</h1>
+    <form id="recipe-form">
+        <label for="recipe">Select a Recipe:</label>
+        <select name="recipe" id="recipe">
+            {% for index in range(recipe_titles|length) %}
+            <option value="{{ recipe_titles[index] }}">{{ recipe_titles[index] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <div id="recommendations"></div>
+    <script>
+        document.getElementById('recipe-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedRecipe = document.getElementById('recipe').value;
+            fetch('/recommendations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'recipe=' + encodeURIComponent(selectedRecipe),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var recommendationsDiv = document.getElementById('recommendations');
+                recommendationsDiv.innerHTML = '';
+                data.forEach(function(recipe) {
+                    var recipeDiv = document.createElement('div');
+                    var title = document.createElement('h2');
+                    title.textContent = recipe.title;
+                    var image = document.createElement('img');
+                    image.src = '/images/' + recipe.image_path; // Use Flask route for serving images
+                    recipeDiv.appendChild(title);
+                    recipeDiv.appendChild(image);
+                    recommendationsDiv.appendChild(recipeDiv);
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
