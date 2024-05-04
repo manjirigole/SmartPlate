@@ -28,16 +28,17 @@ button{
     color: #FDE9D1;
     border: none;
     height: 40px;
-    width: 100px;
+    width: 150px;
     border-radius: 2px;
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
 }
 #recommendations {
-    display: flex;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .recipe-card {
@@ -56,3 +57,266 @@ button{
 .recipe-card h3 {
     text-align: center;
 }
+*{
+	box-sizing: border-box;
+}
+body{
+	overflow: auto;
+	background-color: #FDE9D1;
+	font-family: 'Inter',sans-serif;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	padding: auto;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.logo{
+	margin-top:20px;
+	margin-right: 100px;
+	height: auto;
+}
+.search-box{
+	margin-top: 30px;
+	height: 35px;
+	width:450px;
+	border-radius: 5px;
+	border-style: none;
+	margin-left: 240px;
+	margin-bottom: 20px;
+	margin-right: 70px;
+}
+.search-box::placeholder{
+	padding : 7px;
+	opacity: 70%;
+}
+.nav i{
+	font-size: 20px;
+	cursor: pointer;
+}
+.user{
+	max-width: 100px;
+	height: 30px;
+	background-color: #FDE9D1;
+	border-style: none;
+	word-spacing: 10px;
+	font-weight: 700;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #FDE9D1;
+	font-family: Arial;
+	margin-top: 30px;
+	margin-left: 40px;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	color:  #003B22;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+	font-size: 16px;
+	word-spacing: 10px;
+	border: none;
+	outline: none;
+	color: #003B22;
+	font-weight: 700;
+	padding: 14px 16px;
+	background-color: inherit;
+	font: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #003B22;
+	color: white;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 24.90%;
+	padding: 10px;
+	background-color: #F3F3F3;
+	height: 350px;
+  }
+  .column h4{
+	color: #5AC8AF;
+	margin-left: 10px;
+  }
+  
+  .column h4:hover{
+	cursor: pointer;
+	color: #478d7d;
+  }
+  /* Style links inside the columns */
+  .column a {
+	float: none;
+	color: grey;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a background color on hover */
+
+  .column a:hover {
+	background-color: white;
+	color: black;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+.view-plans{
+	width: 170px;
+	height: 35px;
+	border-style: none;
+	border-radius: 15px;
+	margin-right: 20px;
+	color: white;
+	background-color: #FC8801;
+	cursor: pointer;
+	font-weight: 700;
+}
+.view-plans:hover{
+	color: #FC8801;
+	font-weight: 700;
+	background-color: #003B22;
+
+}
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	margin-right: 70px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+
+/* Your existing CSS code */
+/*nav bar*/
+@media (max-width: 768px) {
+	.nav {
+		flex-direction: column; /* Stack elements vertically on smaller screens */
+		align-items: flex-start; /* Align items to the left */
+	  }
+	  
+	  .search-box {
+		margin-left: 0; /* Remove left margin on smaller screens */
+		margin-top: 10px; /* Add top margin to separate it from the logo */
+	  }
+	}
+   
+
+	@media (max-width: 858px) {
+	  /*.checkbtn {
+		display: inline-block;
+		flex-direction: column;
+	  }
+  */
+	 .navbar {
+	  width: 100%;
+	  top: 80px;
+	  left: -100%;
+	  transition: all 0.5s;
+	  text-align: center;
+	  }
+  
+	  .navbar .nav-element{
+	  flex-direction: column;
+		margin-bottom: 10px;
+	  }
+	  /* Display in a column */
+  
+	   #check:checked + .navbar .nav-element {
+		/*display: block; /* Show ul when the checkbox is checked */
+		left: 0;
+  
+	  }
+	}
+
+  .border{
+	  border-bottom: 2px solid black;
+	  margin-top: 15px;
+	  opacity: 30%;
+	  margin-bottom: 10px;
+  }
+  @media (max-width: 952px) {
+	.responsive-logo {
+	  margin-top: 30px;
+	  display: block;
+	  margin-left: 20px;
+	  font-size: 30px;
+	}
+  
+	.checkbtn {
+	  display: inline-block;
+	}
+  
+	.search-box{
+		display: none;
+	}
+	.nav i{
+		display: none;
+	}
+	.nav img {
+	  display: block;
+	}
+	.nav button{
+		display: none;
+	}
+  
+   .navbar  {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	.navbar .nav-element .dropbtn{
+		margin-top: 10px;
+	  flex-direction: column;
+	  margin-bottom: 10px;
+	}
+}
+  /*end of the nav bar css*/

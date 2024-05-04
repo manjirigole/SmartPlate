@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/recc.css">
     <title>Recipe Recommendations</title>
 </head>
 <body>
@@ -37,7 +38,8 @@
                     var title = document.createElement('h2');
                     title.textContent = recipe.title;
                     var image = document.createElement('img');
-                    image.src = '/static/images/Food Images/' + recipe.image_filename; // Fetch image directly from the directory
+                    //image.src = '/static/images/Food Images/' + recipe.image_filename; // Fetch image directly from the directory
+                    image.src = '{{ url_for("static", filename="images/Food Images/lasagna-with-turkey-sausage-bolognese-364032.jpg") }}';
                     recipeDiv.appendChild(title);
                     recipeDiv.appendChild(image);
                     recommendationsDiv.appendChild(recipeDiv);
