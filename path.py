@@ -1,5 +1,5 @@
 import os
-import csv
+import csv 
 
 # Function to construct full image path
 def construct_image_path(image_name):
